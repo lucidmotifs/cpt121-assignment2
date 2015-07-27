@@ -171,31 +171,30 @@ public class Patient {
 				break;
 			default:
 				_status = "Undefined";
-		} 		
+		}
 		
-		System.out.println();
-		System.out.println("Patient Details:");
 		System.out.println();
 		
 		// Basic details
-		System.out.printf("%-25s %40s %n", "Patient No.:", getNumber());
-        System.out.printf("%-25s %40s %n", "Patient Name:", getName());
-        System.out.printf("%-25s %40s %n", "Patient Status:", _status);
+		System.out.printf("%-25s %20s %n", "Patient No.:", getNumber());
+        System.out.printf("%-25s %20s %n", "Patient Name:", getName());
+        System.out.printf("%-25s %20s %n", "Patient Status:", _status);
 		System.out.println();
 		
 		// Procedure Details
-        System.out.printf("%-25s %40s %n", "Procedure Date:", getProcedureDate());
-		System.out.printf("%-25s %40d %n", "Procedure Type:", m_procedureType);
-		System.out.printf("%-25s %40s %n", "Doctor Assigned:", getDoctor());
-		System.out.printf("%-25s %36d hrs %n", "Procedure Time:", m_procedureTime);
+        System.out.printf("%-25s %20s %n", "Procedure Date:", getProcedureDate());
+		System.out.printf("%-25s %20d %n", "Procedure Type:", m_procedureType);
+		System.out.printf("%-25s %20s %n", "Doctor Assigned:", getDoctor());
+		System.out.printf("%-25s %16d hrs %n", "Procedure Time:", m_procedureTime);
 		System.out.println();
 				
 		// Invoice
-		System.out.printf("%-25s %40s %n", "Invoice Charge:", String.format("$%.2f", calculateCharge()));
+		System.out.printf("%-25s %20s %n", "Invoice Charge:", String.format("$%.2f", calculateCharge()));
 		System.out.println();
 		
 		// Notes
 		System.out.println("Patient Notes:");
 		System.out.printf("%n%s %n", getNotes());
+		
 	}
 }
